@@ -4,6 +4,12 @@
 
 Exige el código antes de cambiar el estado.
 
+### Detalles
+
+- Añade a `Cell` el campo privado `securityCode` (1234) y un getter `getIsOpen()`.
+- El método `setIsOpen(boolean isOpen, int code)` solo cambia el estado si `code` coincide con `securityCode`; si no, muestra `Incorrect code`.
+- En `main` intenta abrir la celda con el código `1111`, muestra `"Abierta: " + cell.getIsOpen()`, vuelve a intentarlo con `1234` y muestra de nuevo el estado.
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -30,4 +36,5 @@ Abierta: true
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

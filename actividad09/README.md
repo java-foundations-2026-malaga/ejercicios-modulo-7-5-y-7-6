@@ -4,6 +4,12 @@
 
 Delega la apertura segura en Guard.
 
+### Detalles
+
+- Reutiliza la `Cell` de la actividad anterior (campos privados `name`, `isOpen`, `securityCode` = 1234, getters `getName()` y `getIsOpen()` y `setIsOpen(boolean isOpen, int code)`).
+- Crea una clase `static class Guard` con un método `openCell(Cell cell)` que muestre `Guardia intenta abrir <nombre de la celda>` y abra la celda con el código correcto.
+- En `main` crea la celda A1 y un guardia, pide al guardia que la abra y muestra `"Abierta: " + cell.getIsOpen()`.
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -29,4 +35,5 @@ Abierta: true
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

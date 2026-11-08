@@ -4,6 +4,12 @@
 
 Impide incrementar el contador al superar el máximo.
 
+### Detalles
+
+- Crea `static class Prisoner` con la constante `public static final int MAX_PRISONER_COUNT = 100` y el contador `static int prisonerCount`.
+- En el constructor, incrementa el contador solo si es menor que `MAX_PRISONER_COUNT`; si ya se ha alcanzado, muestra `Capacidad máxima alcanzada`.
+- En `main` muestra la capacidad máxima, crea 100 presos con un bucle, muestra `"Prisioneros: " + Prisoner.prisonerCount` y después intenta crear un preso más.
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -30,4 +36,5 @@ Capacidad máxima alcanzada
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

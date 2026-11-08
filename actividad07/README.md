@@ -4,6 +4,12 @@
 
 Incluye la celda y muestra su nombre mediante getter.
 
+### Detalles
+
+- Crea `static class Cell` con el campo privado `name`, constructor `Cell(String name)` y getter `getName()`.
+- Crea `static class Prisoner` con los campos privados `name` y `Cell cell`, constructor `Prisoner(String name, Cell cell)` y getters `getName()` y `getCell()`.
+- Crea la celda A1 y el preso Bubba en esa celda y muestra `"Bubba - Celda "` seguido del nombre de su celda, obtenido con `getCell().getName()`.
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -28,4 +34,5 @@ Bubba - Celda A1
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

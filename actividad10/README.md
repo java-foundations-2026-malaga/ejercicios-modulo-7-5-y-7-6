@@ -4,6 +4,12 @@
 
 Convierte los campos en privados y usa accesores seguros.
 
+### Detalles
+
+- Crea `static class Cell` con el campo privado `name` y su getter `getName()`.
+- Crea `static class Prisoner` con los campos **privados** `name` (String), `height` (double), `sentence` (int) y `cell` (Cell), un constructor con los cuatro datos y un getter para cada campo.
+- Crea el preso Bubba (1.75, 4, celda A1) y muestra sus datos usando **solo** los getters, con el formato `nombre: altura, condena, celda`.
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -28,4 +34,5 @@ Bubba: 1.75, 4, A1
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

@@ -4,6 +4,12 @@
 
 Asigna contador compartido y número de reserva individual.
 
+### Detalles
+
+- Crea `static class Prisoner` con un campo `static int prisonerCount` (compartido por todos los objetos) y los campos de instancia privados `name` y `bookingNumber`.
+- En el constructor `Prisoner(String name)` incrementa `prisonerCount` y asigna su valor a `bookingNumber`.
+- Crea a Bubba y a Twitch, muestra `<nombre> reserva <bookingNumber>` para cada uno y después `"Total: " + Prisoner.prisonerCount`.
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -30,4 +36,5 @@ Total: 2
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

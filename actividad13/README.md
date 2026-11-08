@@ -4,6 +4,11 @@
 
 Muestra tres reservas y un contador compartido.
 
+### Detalles
+
+- Crea `static class Prisoner` con un contador `static int prisonerCount` y un campo de instancia `bookingNumber` que el constructor rellena con el valor del contador tras incrementarlo.
+- Crea tres presos y muestra el `bookingNumber` de cada uno (`Reservas: 1, 2, 3`) y el contador compartido (`Contador compartido: 3`).
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -29,4 +34,5 @@ Contador compartido: 3
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

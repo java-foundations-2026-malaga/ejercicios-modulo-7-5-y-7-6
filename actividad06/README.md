@@ -4,6 +4,11 @@
 
 Define campos privados, constructor y getters.
 
+### Detalles
+
+- Crea una clase `static class Cell` con los campos **privados** `String name` y `boolean isOpen`, un constructor `Cell(String name, boolean isOpen)` y los getters `getName()` y `getIsOpen()`.
+- En `main` crea la celda `A1` cerrada (`false`) y muestra sus datos usando los getters.
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -29,4 +34,5 @@ Abierta: false
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

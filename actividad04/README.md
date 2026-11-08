@@ -4,6 +4,10 @@
 
 Accede al contador mediante la clase.
 
+### Detalles
+
+- `prisonerCount` es `static`: pertenece a la clase. Accede a él con `Prisoner.prisonerCount` en lugar de hacerlo a través de un objeto (`p01.prisonerCount`).
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -28,4 +32,5 @@ Prisioneros: 2
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.

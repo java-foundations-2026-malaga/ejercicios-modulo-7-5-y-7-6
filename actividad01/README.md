@@ -4,6 +4,10 @@
 
 Usa getters para consultar Cell.
 
+### Detalles
+
+- Ten en cuenta que, al ser `Cell` una clase anidada, Java permite acceder a sus campos privados desde `main`, pero eso rompe la encapsulación: consulta los datos **solo** a través de `getName()` y `getIsOpen()`.
+
 ## Objetivo
 
 - Leer el código base y corregirlo o completarlo.
@@ -29,4 +33,5 @@ Abierta: false
 
 ## GitHub Actions
 
-- El workflow `Java CI` ejecuta automáticamente `mvn test` en cada push.
+- Sube tu trabajo a **tu rama** (no a `main`): el workflow `Autocorrección` compila y ejecuta los tests de cada actividad que hayas modificado.
+- En la pestaña **Actions** del repositorio verás ✅ si la actividad está aprobada o ❌ si hay errores de compilación o tests que fallan.
